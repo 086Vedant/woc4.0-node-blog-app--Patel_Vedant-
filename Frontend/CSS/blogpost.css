@@ -1,0 +1,33 @@
+.post-img{
+    height: 400px;
+    overflow: hidden;
+    /* margin-top: 4px; */
+
+}
+
+.post-img img{
+    width: 100%;
+}
+
+.blog-post-content{
+    width: 70vw;
+    /* background-color: orchid; */
+}
+
+.blog-post-content h1{
+    text-align: center;
+}
+
+.blog-post-meta{
+    /* Sbackground-color: rgb(9, 255, 193); */
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog-info{
+    padding: 10px;
+}
+
+.blog-info div{
+    padding: 5px;
+}

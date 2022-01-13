@@ -1,0 +1,136 @@
+
+*{
+    margin:  0;
+    padding: 0;
+}
+
+.navigation{
+    font-family: var(--font2);
+    height: 74px;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.nav-left{
+    font-size: 20px;
+    display: flex;
+
+}
+
+.nav-left ul{
+    display: flex;
+    align-items: center;
+    margin: 0 50px;
+    font-size: 15px;
+}
+
+.nav-left ul li{
+    list-style: none;
+    margin: 0 7px;
+    font-family: var(--font1);
+
+}
+
+.nav-left ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-left ul li a:hover{
+    color: var(--main-bg-color);
+
+}
+.nav-right{
+
+
+}
+
+.content{
+    padding: 10px;
+    display: flex;
+    height: 100%;
+    position: relative;
+    /* background-color: rgb(138, 138, 255); */
+}
+
+.content::after{
+    content:"";
+    background-image: url('../Img/Home.jpg');
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    opacity: 0.15;
+}
+
+.content-left{
+    padding: 30px;
+    font-family: var(--font2);
+    /* width: 50%; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.content-left h2{
+    font-family: var(--font1);
+}
+
+.content-right{
+    /* width: 50%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.content-right img{
+    height: 300px;
+    border: 2px solid black;
+    border-radius: 50px;
+}
+
+.home-articles{
+    padding: 20px;
+    margin-top: 17px;
+    /* height: 500px; */
+    background-color: var(--main-bg-color);
+}
+
+.home-articles h2{
+    font-family: var(--font1);
+}
+
+.home-article{
+    display: flex;
+    padding: 0px;
+}
+
+.home-article-content{
+    align-self: center;
+    padding: 25px;
+}
+
+.home-article-content a{
+    text-decoration: none;
+    color: black;
+}
+
+.home-article img{
+    width: 297px;
+    padding: 20px;
+}
+
+.footer{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(43, 159, 226);
+    width: 60vw;
+    flex-direction: column;
+}
+
