@@ -1,0 +1,42 @@
+@media screen and (max-width: 800px)
+{
+
+    .navigation{
+        flex-direction: column;
+        margin-bottom: 23px;
+    }
+
+    .nav-left{
+        text-align: center;
+        flex-direction: column;
+    }
+    
+    .content-right{
+        display: none;
+    }
+
+    .home-article{
+        flex-direction: column;
+    }
+
+    .home-article-img{
+        text-align: center;
+    }
+
+    .form-input{
+        width: 50%;
+    }
+
+    .form-box input, textarea{
+        width: 66vw;
+    }
+
+    .social{
+        padding: 0;
+    }
+
+    .post-img{
+        height: auto;
+    }
+
+}

@@ -1,0 +1,60 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Roboto:wght@300&display=swap');
+
+
+:root{ 
+   --main-bg-color : rgb(181, 255, 249);
+   --font1: 'Mochiy Pop P One', sans-serif;
+   --font2: 'Roboto', sans-serif;
+
+}
+
+.font1{
+    font-family: var(--font1);
+}
+
+.font2{
+    font-family: var(--font2);
+}
+
+.max-width-1{
+    max-width: 80vw;
+    margin: auto;
+}
+
+.max-width-2{
+    max-width: 60vm;
+}
+
+.margin-auto{
+    margin: auto;
+}
+
+.my-2{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.btn{
+    font-family: var(--font2);
+    padding: 3px 10px;
+    border :3px solid black;
+    border-radius: 4px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover{
+    color: black;
+    background-color: var(--main-bg-color);
+}
+
+.form-input{
+    padding: 3px 5px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 0 12px;
+    font-family: var(--font2);
+}

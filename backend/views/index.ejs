@@ -1,0 +1,65 @@
+<!--inclue header-->
+<%-include('include/__header')%> 
+<!--/inclue header-->
+
+    <div class="content max-width-1 margin-auto my-2">
+        <div class="content-left">
+            <h2>The Blogger</h2>
+            <p>A car (or automobile) is a wheeled motor vehicle used for transportation. Most definitions of cars say
+                that they run primarily on roads, seat one to eight people,
+                have four wheels, and mainly transport people rather than goods.[2][3] Cars came into global use during
+                the 20th century, and developed economies depend on them.
+                The year 1886 is regarded as the birth year of the car when German inventor Karl Benz patented his Benz
+                Patent-Motorwagen.[1][4][5] Cars became widely available
+                in the early 20th century. </p>
+        </div>
+
+        <div class="content-right">
+
+            <img src="Img/Home.jpg" alt="">
+        </div>
+
+    </div>
+
+    <div class="max-width-1">
+        <hr>
+    </div>
+
+    <div class="home-articles max-width-1 margin-auto font2">
+
+        <h2 >Feature Articles</h2>
+        <div class="home-article">
+
+            <div class="home-article-img">
+                <img src="Img/Vecteezy-Retro-Futuristic-Background2_jm0121_generated.jpg" alt="">
+            </div>
+            
+            <div class="home-article-content font2">
+                <a href="/blogpost?id=<%= posts[0]._id%>"><h3><%= posts[0].title %></h3></a> 
+                <div><%= posts[0].username %></div>               
+                <span>Date and required time</span>
+
+            </div>
+        </div>
+
+        <div class="home-article">
+
+            <div class="home-article-img">
+                <img src="Img/vecteezy_incorporating-ideas-into-a-blog-and-web-content_.jpg" alt="">
+            </div>
+            
+            <div class="home-article-content font2">
+                <a href="/blogpost"><h3>Lorem, ipsum dolor sit amet consectetur adipisicing.</h3></a> 
+                <div>Author name</div>
+                <span>Date and required time</span>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!--inclue footer-->
+    <%-include('include/__footer')%> 
+<!--/inclue footer-->
+
+    
