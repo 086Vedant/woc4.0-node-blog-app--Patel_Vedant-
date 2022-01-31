@@ -1,0 +1,71 @@
+<!--inclue header-->
+<%-include('include/__header')%> 
+<!--/inclue header-->
+
+<!-- <script>
+    const axios = require('axios');
+    
+    function callNewPost(){
+        console.log("HELLOW")
+        axios.post('http://localhost:3000/newpost',{})
+        .then(results =>{
+            
+            //res.render('index.ejs',{posts: results})
+         })
+        .catch(error => console.error(error))
+    }
+
+</script> -->
+
+    <div class="max-width-1 margin-auto">
+        <hr>
+    </div>
+
+
+    <div class="contact-content">
+        <div class="home-articles max-width-1 margin-auto font2">
+            <!-- <h2>Feel free to contact us</h2>   -->
+
+        <form method="post" name="bpost" action="updatePost?id=<%= post._id%>" >
+            <div class="contact-form">
+                <div class="form-box">
+                    <input type="hidden" name="username" value="<%=login_user%>" placeholder="Enter your username">
+                </div>
+
+                <div class="form-box">
+                    <input type="text" name="title" value="<%= post.title%>" placeholder="Enter post-title">
+                </div>
+
+                <div class="form-box">
+                    <input type="text" name="categories" value="<%= post.categories%>" placeholder="Enter post-categorie">
+                </div>
+
+                
+
+                <div class="form-box">
+                    <textarea name="desc" id="" cols="30" rows="10"  placeholder="content"><%= post.desc%></textarea>
+                </div>
+
+                <div class="form-box">
+                    <button class="btn" type="submit">Summit</button>
+                </div>
+            </form>
+
+            <!-- <form action="/api/photo" enctype="multipart/form-data" method="post">
+                <div class="postImage">    
+                    <h4 style=" color: rgb(5, 5, 5); font-size: 15px; width: 20%;  padding: 5px; margin: 5px 5px 5px 0px; font-family:'Roboto', sans-serif;">Enter Image</h4>
+                    <input type="file" id="myFile" name="photo" style="background-color: white; padding: 5px; margin: 0px 5px 5px 0px; border: 2px solid rgb(0, 102, 255);" accept="image/png, image/jpeg" name = "PostImage" width="40" height="40" >
+                </div>
+                <div class="form-box">
+                    <button class="btn" type="submit">Summit</button>
+                </div>
+            </form> -->
+
+            </div> 
+        </div>
+    </div>
+   
+
+    <!--inclue footer-->
+    <%-include('include/__footer')%> 
+<!--/inclue footer-->

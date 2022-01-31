@@ -1,0 +1,58 @@
+<!--inclue header-->
+<%-include('include/__header')%> 
+<!--/inclue header-->
+   <script >
+       const login_user =  "<%=login_user%>";
+       const Post_user =  "<%= post.username %>";
+       const id = '<%= post._id%>';
+
+   </script>
+
+<%if (delete_message!='') { %>
+   <p align=center style="color: rgb(86, 125, 255); margin: 20px; font-size: 150%;" ><%=delete_message%></p>
+<% } %>
+
+<%if (edit_message!='') { %>
+    <p align=center style="color: rgb(86, 125, 255); margin: 20px; font-size: 150%;" ><%=edit_message%></p>
+ <% } %>
+
+    <div class="post-img">
+        <img src="/Image/<%= post.image%>" alt="">
+    </div>
+
+    <div class="max-width-1 margin-auto">
+        <hr>
+    </div>
+
+    <div class="blog-post-content margin-auto my-2">
+        <div class="content-left">
+            <h1><%= post.title %></h1>
+            <div class="blog-post-meta">
+                <div class="blog-info">
+                    <div class="author-info">
+                       <b>Author: <%= post.username %></b>
+                    </div>
+
+                </div>
+                <div class="social">
+                    <!-- href="/DELETE?id=<%= post._id%>" -->
+                    <!-- "  href="/quot?id=<%= post._id%>"-->
+                     <a href="/quot?id=<%= post._id%>" class="btn">Edit</a> 
+                     <a href="/DELETE?id=<%= post._id%>"  class="btn">Delete</a>                    
+                </div>
+
+            </div>
+            <p><%= post.desc%>  </p>
+        </div>
+
+        
+
+    </div>
+
+    <div class="max-width-1">
+        <hr>
+    </div>
+
+   <!--inclue footer-->
+   <%-include('include/__footer')%> 
+   <!--/inclue footer-->

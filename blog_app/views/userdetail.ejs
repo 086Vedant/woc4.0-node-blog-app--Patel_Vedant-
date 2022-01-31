@@ -1,0 +1,41 @@
+<!--inclue header-->
+<%-include('include/__header')%> 
+<!--/inclue header-->
+
+<!-- <script>
+
+</script> -->
+
+    <div class="max-width-1 margin-auto">
+        <hr>
+    </div>
+
+<script>
+    var Message = "<%=message%>"
+    if(Message!='') alert(Message);
+</script>
+
+<p align=center style="color: rgb(86, 125, 255); margin: 20px; font-size: 150%;" >You create <%= posts.length%>  posts</p>
+
+<% for(var i=0; i<posts.length; i++) { %>
+    <div class="home-articles max-width-1 margin-auto font2">
+        <div class="home-article">
+
+            <div class="home-article-img">
+                <img src="/Image/<%= posts[i].image%>" alt="">
+            </div>
+            
+            <div class="home-article-content font2">
+                <a href="/blogpost?id=<%= posts[i]._id%>"><h3><%= posts[i].title %></h3></a> 
+                <div>Author: <%=posts[i].username %></div>               
+                <!-- <span>Date and required time</span> -->
+
+            </div>
+        </div>
+    </div>
+<% } %>
+
+
+    <!--inclue footer-->
+    <%-include('include/__footer')%> 
+<!--/inclue footer-->

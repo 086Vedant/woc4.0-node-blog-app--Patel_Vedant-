@@ -1,0 +1,57 @@
+<!--inclue header-->
+<%-include('include/__header')%> 
+<!--/inclue header-->
+
+<script>
+    const current_user = "<%=login_user%>";
+    const Message = "<%= message%>";
+
+</script>
+
+    <div class="max-width-1 margin-auto">
+        <hr>
+    </div>
+
+    <% if( message!='') { %>
+        <p align=center style="color: rgb(86, 125, 255); margin: 20px; font-size: 150%;" ><%= message%></p>
+    <% }  %>
+   
+    <div class="contact-content">
+        <div class="home-articles max-width-1 margin-auto font2">
+            <!-- <h2>Feel free to contact us</h2>   -->
+
+        <form method="post" name="bpost" action="/register" >
+            <div class="contact-form">
+                <div class="form-box">
+                    <input type="text" name="username" placeholder="Enter your username">
+                </div>
+
+                <div class="form-box">
+                    <input type="text" name="email" placeholder="Enter your email">
+                </div>
+
+                <div class="form-box">
+                    <input type="text" name="password" placeholder="Enter password">
+                </div>
+
+                
+                <div class="form-box">
+                    <button class="btn" type="submit">Summit</button>
+                </div>
+
+                <div class="form-box" style="margin: 5px;">
+                   <p>Already have an account? </p> <a href="/LOGIN">login</a>               
+                </div>
+
+
+            </form>
+
+
+            </div> 
+        </div>
+    </div>
+   
+
+    <!--inclue footer-->
+    <%-include('include/__footer')%> 
+<!--/inclue footer-->

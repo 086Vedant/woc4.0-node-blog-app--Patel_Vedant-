@@ -1,0 +1,48 @@
+<!--inclue header-->
+<%-include('include/__header')%> 
+<!--/inclue header-->
+
+<script>
+    
+</script>
+
+    <div class="max-width-1 margin-auto">
+        <hr>
+    </div>
+
+    <% if(login_user!='') { %>
+        <p align=center style="color: rgb(86, 125, 255); margin: 20px; font-size: 150%;" >You are logged in</p>
+    <% } else { %>
+        <% if(Error!='') { %>
+            <p align=center style="color: rgb(86, 125, 255); margin: 20px; font-size: 150%;" ><%=Error%></p>
+        <% } %>
+    <div class="contact-content">
+        <div class="home-articles max-width-1 margin-auto font2">
+            <!-- <h2>Feel free to contact us</h2>   -->
+
+        <form id= "LoginForm" method="post" name="bpost" action="/login"  >
+            <div class="contact-form">
+                <div class="form-box">
+                    <input type="text" name="username" placeholder="Enter your username">
+                </div>
+
+                <div class="form-box">
+                    <input type="text" name="password" placeholder="Enter password">
+                </div>
+
+                
+                <div class="form-box">
+                    <button class="btn" type="submit">Summit</button>
+                </div>
+
+            </form>
+
+
+            </div> 
+        </div>
+    </div>
+   <% } %>
+
+    <!--inclue footer-->
+    <%-include('include/__footer')%> 
+<!--/inclue footer-->

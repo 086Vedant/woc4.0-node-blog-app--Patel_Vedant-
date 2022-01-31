@@ -1,0 +1,64 @@
+<!--inclue header-->
+<%-include('include/__header')%> 
+<!--/inclue header-->
+
+<script>
+
+     var del_message = "<%=delete_message%>";
+    
+    if(del_message!='')
+    {
+        alert(del_message);
+    };
+</script>
+
+    <div class="content max-width-1 margin-auto my-2">
+        <div class="content-left">
+            <h2>Blogger</h2>
+            <h3>Publish your passions, your way</h3>
+                <p>Create a unique and beautiful blog. It’s easy and free. Save the moments that matter. Blogger lets you safely store thousands of posts and photos.
+                    Whether sharing your expertise, breaking news, or whatever’s on your mind, you’re in good company on Blogger. 
+                    Sign up to discover why millions of people have published their passions here.
+                </p>
+        </div>
+
+        <div class="content-right">
+
+            <img src="Img/Home.jpg" alt="">
+        </div>
+
+    </div>
+
+    <div class="max-width-1">
+        <hr>
+    </div>
+
+    
+    <% if(posts.length>5) {%>
+        <% var Length=5%>
+    <% } else { %>
+        <% var Length = posts.length%>
+        <% } %>
+        
+        <% for(var i=0; i<Length; i++){ %>
+            <div class="home-articles max-width-1 margin-auto font2">
+                <div class="home-article">
+        
+                    <div class="home-article-img">
+                        <img src="/Image/<%= posts[i].image%>" alt="">
+                    </div>
+                    
+                    <div class="home-article-content font2">
+                        <a href="/blogpost?id=<%= posts[i]._id%>"><h3><%= posts[i].title %></h3></a> 
+                        <div>Author: <%= posts[i].username %></div>               
+                        <!-- <span>Date and required time</span> -->
+        
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    <!--inclue footer-->
+    <%-include('include/__footer')%> 
+<!--/inclue footer-->
+
+    
